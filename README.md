@@ -1,69 +1,102 @@
-# React + TypeScript + Vite
+# Eventos React Playground
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br />
 
-Currently, two official plugins are available:
+<div align="center">     
+     <img src="https://i.imgur.com/AzshGmS.png" title="source: imgur.com" width="50%"/>
+</div> 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br />
 
-## Expanding the ESLint configuration
+<div align="center">   
+    <img src="https://img.shields.io/github/languages/top/rafaelq80/eventos_react?style=flat-square" />
+    <img src="https://img.shields.io/github/repo-size/rafaelq80/eventos_react?style=flat-square" />   
+     <img src="https://img.shields.io/github/languages/count/rafaelq80/eventos_react?style=flat-square" />
+    <img src="https://img.shields.io/github/last-commit/rafaelq80/eventos_react?style=flat-square" />
+    <img src="https://img.shields.io/github/issues/rafaelq80/eventos_react?style=flat-square" />
+  <img src="https://img.shields.io/github/issues-pr/rafaelq80/eventos_react?style=flat-square" />
+    <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square" /> 
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br />
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Um playground interativo para testar, visualizar e aprender sobre eventos de **mouse** e **teclado** em aplicações React, com foco em acessibilidade e boas práticas modernas.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+<br />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ✨ Funcionalidades
+- Área interativa para capturar e exibir eventos do mouse (cliques, arrasto, rolagem, etc.)
+- Área de input para testar eventos de teclado (keydown, keyup, keypress, atalhos, etc.)
+- Logs detalhados e contador de eventos em tempo real
+- Efeitos visuais para interações do mouse
+- Suporte a tema escuro/claro (dark mode)
+- Componentes acessíveis com React Aria
+- Código comentado e didático para estudo
+
+<br />
+
+## 🚀 Instalação
+
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-repositorio>
+   cd eventos
+   ```
+2. **Instale as dependências:**
+   ```bash
+   yarn install
+   # ou
+   npm install
+   ```
+3. **Rode o projeto localmente:**
+   ```bash
+   yarn dev
+   # ou
+   npm run dev
+   ```
+4. **Acesse no navegador:**
+   - Normalmente em [http://localhost:5173](http://localhost:5173)
+
+<br />
+
+## 🗂️ Estrutura de Diretórios
+
+```
+├── src/
+│   ├── components/         # Componentes reutilizáveis (ex: MouseArea)
+│   ├── hooks/              # Hooks customizados (useMouseEvents, useKeyboardEvents, useDarkMode)
+│   ├── pages/              # Páginas principais (EventTestingApp, MouseEventTester, KeyboardEventTester)
+│   ├── types/              # Tipos TypeScript compartilhados
+│   ├── assets/             # Imagens e SVGs
+│   ├── App.tsx             # Componente raiz
+│   └── main.tsx            # Ponto de entrada
+├── public/                 # Arquivos estáticos
+├── package.json            # Dependências e scripts
+├── vite.config.ts          # Configuração do Vite
+└── README.md               # Este arquivo
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<br />
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias Utilizadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) (build rápido)
+- [Tailwind CSS](https://tailwindcss.com/) (estilização)
+- [React Aria](https://react-spectrum.adobe.com/react-aria/) (acessibilidade)
+
+<br />
+
+## ♿ Acessibilidade
+
+- Áreas interativas usam componentes acessíveis (React Aria)
+- Suporte a navegação por teclado e leitores de tela
+- Dark mode para conforto visual
+
+<br />
+
+## 📚 Aprenda com o Código
+
+O projeto é totalmente comentado (em português Brasil) com JSDoc e explicações nos hooks, componentes e páginas. Ideal para quem quer aprender sobre eventos, hooks customizados e acessibilidade em React.
+
+
